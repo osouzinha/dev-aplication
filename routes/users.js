@@ -24,7 +24,7 @@ app.post("/create", authenticator, (req, res) => {
     const username = email.split("@")[0];
     const pwd_encrypt = bcrypt.hashSync(pwd, 10);
     const new_user = {
-        id: hash({ name, email }),
+        author_id: hash({ name, email }),
         author_name: name,
         author_email: email,
         author_user: username,
@@ -32,8 +32,6 @@ app.post("/create", authenticator, (req, res) => {
         author_level: "admin",
         author_status: true
     }
-
-    console.log(JSON.stringify(new_user));
 
     users.push(new_user);
     fs.writeFileSync(__dirname + '\\data\\users.json', JSON.stringify(users));
@@ -58,12 +56,8 @@ app.put("/update", authenticator, (req, res) => {
     if (name) user.author_name = name;
     if (pwd) user.author_pwd = pwd_encrypt;
     if (email) user.author_user = username;
-    users.forEach(u => {
-        if (u.author_id == user.author_id) {
-            u = user;
-        }
-    });
-    console.log(users);
+    const index = users.findIndex(u => u.author_id === user.author_id);
+    users.splice(index, 0, user);
     fs.writeFileSync(__dirname + '\\data\\users.json', JSON.stringify(users));
     return res.status(204).send();
 })
@@ -79,7 +73,6 @@ app.put("/activate/:id", authenticator, (req, res) => {
             u = user;
         }
     });
-    console.log(users);
     fs.writeFileSync(__dirname + '\\data\\users.json', JSON.stringify(users));
     return res.status(204).send();
 })
@@ -90,12 +83,8 @@ app.delete("/:id", authenticator, (req, res) => {
         return res.status(404).json({ message: "Usuário não encontrado" });
     }
     user.author_status = false;
-    users.forEach(u => {
-        if (u.author_id == user.author_id) {
-            u = user;
-        }
-    });
-    console.log(users);
+    const index = users.findIndex(u => u.author_id === user.author_id);
+    users.splice(index, 0, user);
     fs.writeFileSync(__dirname + '\\data\\users.json', JSON.stringify(users));
     return res.status(204).send();
 
