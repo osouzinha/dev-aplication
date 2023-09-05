@@ -1,0 +1,38 @@
+[
+    {
+        "author_id": "7a6cc1282c5f6ec0235acd2bfa780145aa2a67fd",
+        "author_name": "Andre Faria Ruaro",
+        "author_email": "andre.ruaro@unesc.net",
+        "author_user": "andre.ruaro",
+        "author_pwd": "7a6cc1282c5f6ec0235acd2bfa780145aaskem5n",
+        "author_level": "admin",
+        "author_status": "on"
+    },
+    {
+        "id": "57c4f5645791de3b2a28839fa5a13ad425c7cd67",
+        "author_name": "guilherme1234",
+        "author_email": "guilherme@gmail.com",
+        "author_user": "guilherme",
+        "author_pwd": "$2b$10$Xx5mzyLHtGb5L6i96a2yXu.EeSiKQ0f6ZMUTNZTx1eUOnh7C02opO",
+        "author_level": "admin",
+        "author_status": true
+    },
+    {
+        "id": "851198019a470a6f72f8674880ec8fba8676e16f",
+        "author_name": "guilherme123334",
+        "author_email": "guilherme1@gmail.com",
+        "author_user": "guilherme1",
+        "author_pwd": "$2b$10$Tq4ikAnIwazj7XI1v.A0oed.ZO/y6BPCL93sKjq0zMXtWm6hLp6VO",
+        "author_level": "admin",
+        "author_status": true
+    },
+    {
+        "id": "4079f946a87fbeee8b4c7e788aede109a6e2dc93",
+        "author_name": "guilherme123334",
+        "author_email": "guilherme13@gmail.com",
+        "author_user": "guilherme13",
+        "author_pwd": "$2b$10$sKu4Y3uibnq4GnEcobmDduavrk8HAmdl6AUBynnabAEyNEAffPa1y",
+        "author_level": "admin",
+        "author_status": true
+    }
+]
