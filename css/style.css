@@ -1,0 +1,31 @@
+.botoes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 50px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.cards{
+    margin-top: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+
+    background-color: black;
+}
+.titulo{
+    color: aliceblue;
+}
+.descricao{
+    color: aliceblue;
+    text-align: justify;
+}
+.container{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
